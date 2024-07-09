@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  k6_test:
+    image: loadimpact/k6:latest
+    volumes:
+      - ./k6Script:/scripts
+    entrypoint: ["sh", "-c", "k6 run /scripts/first-script.js"]
